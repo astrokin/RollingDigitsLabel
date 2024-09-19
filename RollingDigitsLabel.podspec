@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RollingDigitsLabel"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "An animated label for displaying numbers"
   s.description      = <<-DESC
                         An animated label for displaying numbers

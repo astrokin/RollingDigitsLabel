@@ -6,7 +6,7 @@
 
 import UIKit
 
-public class RollingDigitsLabel: UIView {
+open class RollingDigitsLabel: UIView {
     
     // MARK: Properties
     private(set) var number: Double = 0 {
@@ -15,7 +15,7 @@ public class RollingDigitsLabel: UIView {
         }
     }
     private var animationConfig = AnimationConfig()
-    private var formatter = NumberFormatter()
+    public var formatter = NumberFormatter()
     private var digits = [DigitColumn.Digit]()
     private var lastFont: UIFont?
     private var lastColor: UIColor?
