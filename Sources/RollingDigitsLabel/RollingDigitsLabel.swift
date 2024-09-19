@@ -177,6 +177,7 @@ private extension RollingDigitsLabel {
         let stack = UIStackView(arrangedSubviews: [])
         stack.axis = .horizontal
         stack.spacing = 0
+        stack.semanticContentAttribute = .forceLeftToRight
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
         addConstraints([
@@ -206,6 +207,7 @@ private extension RollingDigitsLabel {
                 digits.append(digit)
             } else {
                 let label = UILabel()
+                label.semanticContentAttribute = .forceLeftToRight
                 label.text = "\($0)"
                 labelStack?.addArrangedSubview(label)
             }
@@ -282,6 +284,7 @@ private extension RollingDigitsLabel.DigitColumn {
         stack.distribution = .fillEqually
         stack.alignment = .fill
         stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.semanticContentAttribute = .forceLeftToRight
         addSubview(stack)
         let heightConstraint = heightAnchor.constraint(equalTo: stack.heightAnchor, multiplier: 0.1)
         let offsetConstraint = stack.bottomAnchor.constraint(equalTo: bottomAnchor)
